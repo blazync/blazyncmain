@@ -1,0 +1,72 @@
+<div x-data="{ open: false }" class="w-full text-white bg-gray-900 sticky top-0 z-50">
+  <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+    <div class="flex flex-row items-center justify-between py-5">
+      <a href="/" class="relative">
+        <img src="/img/blazync_logo_full.png" alt="" class="w-40 h-15 lg:20">
+
+      </a>
+      <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="white" viewBox="0 0 20 20" class="w-8 h-8">
+          <path x-show="!open" fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }"
+      class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+      <div class="">
+        <div id="services" class="flex">
+          <a
+            class="pl-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline">Services</a>
+          <svg class="mt-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </div>
+        <div id="servicesSubMenus" class="absolute hidden z-[100] bg-white shadow-lg rounded-lg  mt-1">
+          <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:rounded-lg">Website
+            Development</a>
+          <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">App Development</a>
+          <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Customized Software
+            Development</a>
+          <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Digital Marketing</a>
+          <a href="/blazwhats" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BlazWhats</a>
+          <a href="/blazschool" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BlazSchool</a>
+
+        </div>
+      </div>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/portfolio">Portfolio</a>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/careers">Careers</a>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/blog">Blog</a>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/about">About</a>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/contact">Contact</a>
+
+
+    </nav>
+    <script>
+      const servicesMenu = document.getElementById('services');
+      const servicesSubmenu = document.getElementById('servicesSubMenus');
+
+      servicesMenu.addEventListener('click', function () {
+        servicesSubmenu.classList.toggle('hidden');
+      });
+
+      // Optional: Close the menu when clicking elsewhere on the page
+      document.addEventListener('click', function (e) {
+        if (!servicesMenu.contains(e.target) && !servicesSubmenu.contains(e.target)) {
+          servicesSubmenu.classList.add('hidden');
+        }
+      });
+    </script>
+  </div>
+</div>
