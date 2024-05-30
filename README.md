@@ -10,4 +10,4 @@ Optimized SEO of Website and Added Google Analytics
 
 # 1.0.3
 
-Optimized SEO of Website and Added Google Analytics
+Optimized SEO Added sitemap and robots.txt
