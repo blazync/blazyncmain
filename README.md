@@ -7,3 +7,7 @@ Ready for first deployment
 # 1.0.2
 
 Optimized SEO of Website and Added Google Analytics
+
+# 1.0.3
+
+Optimized SEO of Website and Added Google Analytics
