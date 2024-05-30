@@ -1,4 +1,9 @@
 # Blazync Technologies
-# blazynctech
-# blazynctech
-# blazyncmain
+
+# 1.0.1
+
+Ready for first deployment
+
+# 1.0.2
+
+Optimized SEO of Website and Added Google Analytics
