@@ -3,7 +3,6 @@
     <div class="flex flex-row items-center justify-between py-5">
       <a href="/" class="relative">
         <img src="/img/blazync_logo_full.png" alt="" class="w-40 h-15 lg:20">
-
       </a>
       <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
         <svg fill="white" viewBox="0 0 20 20" class="w-8 h-8">
@@ -21,50 +20,67 @@
       <div class="">
         <div id="services" class="flex">
           <a
-            class="pl-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline">Services</a>
+            class="pl-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline">Services</a>
           <svg class="mt-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-chevron-down">
             <path d="m6 9 6 6 6-6" />
           </svg>
         </div>
-        <div id="servicesSubMenus" class="absolute hidden z-[100] bg-white shadow-lg rounded-lg  mt-1">
+        <div id="servicesSubMenus" class="absolute hidden z-[100] bg-white shadow-lg rounded-lg mt-1">
           <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:rounded-lg">Website
             Development</a>
           <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">App Development</a>
           <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Customized Software
             Development</a>
           <a href="/services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Digital Marketing</a>
-          <a href="/blazwhats" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BlazWhats</a>
-          <a href="/blazschool" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BlazSchool</a>
-
         </div>
       </div>
-      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
-        href="/portfolio">Portfolio</a>
-      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
-        href="/careers">Careers</a>
       <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
-        href="/blog">Blog</a>
-      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/portfolio">Portfolio</a>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+        href="/careers">Careers</a>
+      <div class="">
+        <div id="products" class="flex">
+          <a
+            class="pl-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline">Products</a>
+          <svg class="mt-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </div>
+        <div id="productsSubMenus" class="absolute hidden z-[100] bg-white shadow-lg rounded-lg mt-1">
+          <a href="/blazwhats" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BlazWhats</a>
+          <a href="/blazschool" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BlazSchool</a>
+        </div>
+      </div>
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
         href="/about">About</a>
-      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg  md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
+      <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:ml-4 hover:text-yellow-200 focus:outline-none focus:shadow-outline"
         href="/contact">Contact</a>
-
-
     </nav>
     <script>
       const servicesMenu = document.getElementById('services');
       const servicesSubmenu = document.getElementById('servicesSubMenus');
+      const productsMenu = document.getElementById('products');
+      const productsSubmenu = document.getElementById('productsSubMenus');
 
       servicesMenu.addEventListener('click', function () {
         servicesSubmenu.classList.toggle('hidden');
+      });
+
+      productsMenu.addEventListener('click', function () {
+        productsSubmenu.classList.toggle('hidden');
       });
 
       // Optional: Close the menu when clicking elsewhere on the page
       document.addEventListener('click', function (e) {
         if (!servicesMenu.contains(e.target) && !servicesSubmenu.contains(e.target)) {
           servicesSubmenu.classList.add('hidden');
+        }
+        if (!productsMenu.contains(e.target) && !productsSubmenu.contains(e.target)) {
+          productsSubmenu.classList.add('hidden');
         }
       });
     </script>
