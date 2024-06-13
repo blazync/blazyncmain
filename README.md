@@ -15,3 +15,10 @@ Optimized SEO Added sitemap and robots.txt
 # 1.0.3
 
 WhatsApp Link Updated
+
+# 2.0.1
+
+Updated Address
+Updated Product Pages
+Added BlazeWhats
+Changes in about page

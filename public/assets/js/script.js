@@ -44,8 +44,8 @@ const testimonialSwiper = new Swiper('.testimonialSwiper', {
   },
    paginationClickable: true,
     navigation: {
-    nextEl: '.testimonial-swiper-prev',
-    prevEl: '.testimonial-swiper-next',
+    nextEl: '.testimonial-swiper-next',
+    prevEl: '.testimonial-swiper-prev',
   },
 
   // Navigation arrows
